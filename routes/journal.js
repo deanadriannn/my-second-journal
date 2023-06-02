@@ -23,4 +23,4 @@ router.get('/:id', getJournalById);
 router.post('/', parser.single("pdf"), createJournal);
 router.delete('/:id', deleteJournal);
 
-export default router;
+module.exports = router;

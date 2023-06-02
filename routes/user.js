@@ -12,4 +12,4 @@ router.post('/login', loginUser);
 router.post('/signup', signupUser);
 router.patch('/premium/:username', makePremium)
 
-export default router;
+module.exports = router;

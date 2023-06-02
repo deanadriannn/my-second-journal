@@ -7,7 +7,7 @@ const cloudinaryConfig = require('../middleware/cloudinary.config.js');
 
 cloudinary.config(cloudinaryConfig)
 
-export const getJournals = async (req, res) => {
+module.exports.getJournals = async (req, res) => {
   try {
     const journals = await Journal.find();
     res.json(journals);
@@ -16,7 +16,7 @@ export const getJournals = async (req, res) => {
   }
 }
 
-export const getJournalsForOwner = async (req, res) => {
+module.exports.getJournalsForOwner = async (req, res) => {
   const user_id = req.user._id
   try {
     const journals = await Journal.find({ user_id });
@@ -26,7 +26,7 @@ export const getJournalsForOwner = async (req, res) => {
   }
 }
 
-export const getJournalById = async (req, res) => {
+module.exports.getJournalById = async (req, res) => {
   try {
     const journal = await Journal.findById(req.params.id);
     res.json(journal);
@@ -35,7 +35,7 @@ export const getJournalById = async (req, res) => {
   }
 }
 
-export const getStandardJournals = async (req, res) => {
+module.exports.getStandardJournals = async (req, res) => {
   try {
     const isPremium = false
     const journals = await Journal.find({ isPremium })
@@ -45,7 +45,7 @@ export const getStandardJournals = async (req, res) => {
   }
 }
 
-export const createJournal = async (req, res) => {
+module.exports.createJournal = async (req, res) => {
   const user_id = req.user._id
   // console.log(req.file)
   const pdfUploaded = new Journal({
@@ -70,7 +70,7 @@ export const createJournal = async (req, res) => {
 };
 
 
-export const deleteJournal = async (req, res) => {
+module.exports.deleteJournal = async (req, res) => {
   try {
     const journalId = req.params.id;
 
