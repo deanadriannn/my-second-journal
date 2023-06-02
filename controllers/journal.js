@@ -1,8 +1,9 @@
 // journalController
-import Journal from '../models/journal.js';
-import User from '../models/user.js';
-import { v2 as cloudinary } from 'cloudinary';
-import cloudinaryConfig from '../middleware/cloudinary.config.js';
+const Journal = require('../models/journal.js');
+const User = require('../models/user.js');
+const { v2: cloudinary } = require('cloudinary');
+const cloudinaryConfig = require('../middleware/cloudinary.config.js');
+
 
 cloudinary.config(cloudinaryConfig)
 

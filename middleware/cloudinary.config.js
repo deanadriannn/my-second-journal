@@ -1,4 +1,5 @@
-import * as dotenv from 'dotenv'
+const dotenv = require('dotenv');
+
 
 dotenv.config()
 

@@ -1,5 +1,10 @@
-import express from 'express';
-import { loginUser, signupUser, makePremium } from '../controllers/user.js'
+const express = require('express');
+const {
+  loginUser,
+  signupUser,
+  makePremium
+} = require('../controllers/user.js');
+
 
 const router = express.Router();
 

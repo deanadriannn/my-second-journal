@@ -1,11 +1,11 @@
-import express from 'express';
-import * as dotenv from 'dotenv';
-import cors from 'cors';
-import morgan from 'morgan'
-import path from 'path';
-import connectDB from './connect.js';
-import journalRoute from './routes/journal.js';
-import userRoute from './routes/user.js';
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+const morgan = require('morgan');
+const path = require('path');
+const connectDB = require('./connect.js');
+const journalRoute = require('./routes/journal.js');
+const userRoute = require('./routes/user.js');
 
 dotenv.config();
 

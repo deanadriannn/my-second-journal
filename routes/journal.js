@@ -1,9 +1,17 @@
 // journalRoutes
-import express from 'express';
-import parser from '../middleware/upload.js';
-import requireAuth from '../middleware/requireAuth.js'
+const express = require('express');
+const parser = require('../middleware/upload.js');
+const requireAuth = require('../middleware/requireAuth.js');
 
-import { getJournals, getJournalById, createJournal, deleteJournal, getJournalsForOwner, getStandardJournals } from '../controllers/journal.js';
+const {
+  getJournals,
+  getJournalById,
+  createJournal,
+  deleteJournal,
+  getJournalsForOwner,
+  getStandardJournals
+} = require('../controllers/journal.js');
+
 
 const router = express.Router();
 router.use(requireAuth);
